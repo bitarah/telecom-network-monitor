@@ -1,0 +1,1 @@
+React, Node.js, Express, Socket.io, PostgreSQL, Redis, Chart.js, Material-UI, RESTful APIs, Real-time Systems, Docker, Kubernetes, 5G Networks, Telecommunications, Network Monitoring, WebSocket, Database Design, Performance Optimization
