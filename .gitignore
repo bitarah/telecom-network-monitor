@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Data files
+data/raw/*.parquet
+data/raw/*.csv
+data/raw/*.zip
+*.h5
+*.hdf5
+
+# ML Models
+ml/models/*.pkl
+ml/models/*.h5
+ml/models/*.keras
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Node
+node_modules/
+npm-debug.log*
+frontend/dist/
+frontend/.vite/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+logs/
+*.log
