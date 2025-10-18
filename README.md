@@ -59,9 +59,32 @@ This project demonstrates **end-to-end ML engineering skills** for the telecommu
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.9+
-- Node.js 18+
-- npm or yarn
+- **Docker Option:** Docker Desktop
+- **Manual Option:** Python 3.9+, Node.js 18+, npm or yarn
+
+### Option A: Docker (Recommended - Easiest Setup)
+
+**Just run one command to start everything:**
+
+```bash
+./start.sh
+```
+
+This will:
+- Build and start the React dashboard at `http://localhost:5173`
+- Build and start the Gradio ML app at `http://localhost:7860`
+- Show backend logs in the terminal
+
+**To stop:**
+```bash
+./stop.sh
+```
+
+**Note:** ML models and data must be generated first (see step 2 in Manual Setup below if starting fresh).
+
+---
+
+### Option B: Manual Setup
 
 ### 1. Clone Repository
 ```bash

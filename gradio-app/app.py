@@ -18,7 +18,12 @@ from ml.anomaly_detector import NetworkAnomalyDetector
 from ml.coverage_classifier import CoverageClassifier
 
 # Load models
-MODEL_DIR = Path(__file__).parent.parent / "ml" / "models"
+# Check if running in Docker (models are in /app/ml/models)
+# or locally (models are in parent/ml/models)
+if Path("/app/ml/models").exists():
+    MODEL_DIR = Path("/app/ml/models")  # Docker path
+else:
+    MODEL_DIR = Path(__file__).parent.parent / "ml" / "models"  # Local path
 
 try:
     anomaly_detector = NetworkAnomalyDetector.load(MODEL_DIR)
@@ -148,7 +153,11 @@ def analyze_network_sample():
         return "❌ Models not loaded.", None
 
     # Load sample data
-    data_path = Path(__file__).parent.parent / "data" / "raw" / "synthetic_5g_timeseries.csv"
+    # Check if running in Docker or locally
+    if Path("/app/data/raw/synthetic_5g_timeseries.csv").exists():
+        data_path = Path("/app/data/raw/synthetic_5g_timeseries.csv")  # Docker path
+    else:
+        data_path = Path(__file__).parent.parent / "data" / "raw" / "synthetic_5g_timeseries.csv"  # Local path
     df = pd.read_csv(data_path)
 
     # Get anomalies
@@ -324,4 +333,4 @@ with gr.Blocks(title="5G Network ML Analytics", theme=gr.themes.Soft()) as app:
 
 
 if __name__ == "__main__":
-    app.launch()
+    app.launch(server_name="0.0.0.0", server_port=7860)

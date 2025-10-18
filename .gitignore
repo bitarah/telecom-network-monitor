@@ -47,3 +47,7 @@ frontend/.vite/
 # Logs
 logs/
 *.log
+
+# Docker
+.docker/
+docker-compose.override.yml
