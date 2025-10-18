@@ -197,9 +197,9 @@ MIT License - see [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Bita Rahmat Zadeh**
-- Portfolio: [Your Portfolio URL]
-- LinkedIn: [Your LinkedIn]
-- Email: [Your Email]
+- Portfolio: [My Portfolio ](https://bitarah.github.io/)
+- LinkedIn: [My LinkedIn](https://www.linkedin.com/in/bita-rahmat-zadeh-240a3b1b0/)
+- Github: [@bitarah](https://github.com/bitarah)
 
 ## 🙏 Acknowledgments
 
