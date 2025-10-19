@@ -1,0 +1,41 @@
+services:
+  # Frontend - React + Vite Dashboard
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: 5g-network-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    networks:
+      - network-monitor
+    restart: unless-stopped
+
+  # Backend - Gradio ML Analytics App
+  backend:
+    build:
+      context: .
+      dockerfile: gradio-app/Dockerfile
+    container_name: 5g-network-backend
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./gradio-app:/app
+      - ./ml:/app/ml
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - network-monitor
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+networks:
+  network-monitor:
+    driver: bridge
