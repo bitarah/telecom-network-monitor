@@ -2,7 +2,7 @@
 
 ## GitHub Pages Deployment (React Dashboard)
 
-### Option 1: GitHub Actions (Automated)
+### Option 1: GitHub Actions (Automated) 
 
 1. **Enable GitHub Pages**:
    - Go to your repository → Settings → Pages
